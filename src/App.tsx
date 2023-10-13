@@ -45,6 +45,8 @@ const products=[
   }
 ]
 
+const categories = ['Produce', 'Prepared foods', 'Canned foods & Soups','Bakery','Meat & Seafood','Frozen'];
+
 const App: React.FC = () => {
 
   return (
@@ -53,6 +55,9 @@ const App: React.FC = () => {
       <Navbar/>
       <CategoryPanel/> 
       <div className="main-content">
+        {categories.map((category,categoryIndex)=>(
+        <div key={categoryIndex} className='category-container'>
+          <h2>{category}</h2>
         <div className='product-loop'>
       {products.map((product, index) => (
           <Product
@@ -65,6 +70,8 @@ const App: React.FC = () => {
         ))}
         </div>
       </div>
+        ))}
+        </div>
     </div>
     </Provider>
   );
