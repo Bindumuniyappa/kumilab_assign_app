@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import Cart from '../Cart/Cart'; // Assuming you have a Cart component
+import Cart from '../Cart/Cart'; 
 
 const Navbar: React.FC = () => {
   return (
