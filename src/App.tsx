@@ -1,4 +1,5 @@
-import React,{useState} from 'react';
+import React from 'react';
+import {Provider} from 'react-redux'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import CategoryPanel from './components/CategoryPanel/CategoryPanel';
@@ -34,13 +35,13 @@ const products=[
 
 const App: React.FC = () => {
 
-  const [cartCount,setCartCount]=useState(0);
 
-  const handleAddCart=()=>{
-    setCartCount(cartCount+1);
-  }
+  // const handleAddCart=()=>{
+  //   setCartCount(cartCount+1);
+  // }
 
   return (
+    <Provider store={store}>
     <div className="app">
       <Navbar/>
       <CategoryPanel/> 
@@ -52,11 +53,11 @@ const App: React.FC = () => {
             price={product.price}
             subtitle={product.subtitle}
             Image={product.Image}
-            onAddToCart={handleAddCart}
           />
         ))}
       </div>
     </div>
+      </Provider>
   );
 };
 

@@ -1,11 +1,15 @@
-// import {Product} from '../../components/Product';
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../constants';
 
-// export const addToCart = (product:Product) => ({
-//   type: 'ADD_TO_CART',
-//   payload: product,
-// });
+export const addToCart = (item: string) => {
+  return {
+    type: ADD_TO_CART,
+    payload: item,
+  };
+};
 
-// export const removeFromCart = (productId:ProductId) => ({
-//   type: 'REMOVE_FROM_CART',
-//   payload: productId,
-// });
+export const removeFromCart = (item: string) => {
+  return {
+    type: REMOVE_FROM_CART,
+    payload: item,
+  };
+};
