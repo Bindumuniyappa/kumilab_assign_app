@@ -12,5 +12,12 @@
     font-weight: bold;
 }
 
+@media (min-width:480px) and (max-width: 767px) {
+    .navbar {
+       background-color: white; 
+    }
 
-
+    .logo {
+        font-size: 18px;
+    }
+}

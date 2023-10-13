@@ -2,3 +2,13 @@
   font-size: 2rem;
   cursor: pointer;
 }
+
+.main-content{
+  width: 89%;
+  display:flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  position: relative;
+  margin-left: 202px;
+  margin-top: -967px;
+}

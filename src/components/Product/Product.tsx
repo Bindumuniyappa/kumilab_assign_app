@@ -1,10 +1,32 @@
-import React from 'react';
+// src/components/Product.tsx
+import React, { useState } from 'react';
+import './Product.css';
 
-const Product: React.FC = () => {
-  // Implement the Product component here
+interface ProductProps {
+  name: string;
+  price: string;
+  subtitle: string;
+  Image:string;
+  onAddToCart:()=>void;
+}
+
+const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image,onAddToCart }) => {
+  const [cartCount, setCartCount] = useState(0);
+
+  const addToCart = () => {
+    setCartCount(cartCount + 1);
+    onAddToCart();
+  };
+
   return (
+    <div className='product-container'>
     <div className="product">
-      {/* Product details go here */}
+      <h3>{name}</h3>
+      <p className="product-subtitle">{subtitle}</p>
+      <p className="product-price">{price}</p>
+      <button onClick={addToCart}>+</button>
+      <span className="cart-count">{cartCount}</span>
+    </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ width: 60px;
 height: 35px;
 background-color: white;
 border-radius: 40%;
-box-shadow: darkgrey;
+box-shadow: 2px 4px 8px rgba(36, 35, 35, 0.2);
 }
 
 .count-container{

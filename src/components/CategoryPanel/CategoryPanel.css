@@ -26,7 +26,7 @@
 }
 
 .category-list li {
-    padding: 6px 0;
+    padding: 5px 0;
     cursor: pointer;
     font-weight: bold;
 }
@@ -44,5 +44,9 @@
         top: 0;
         height: 100vh;
         width: 100%;
+    }
+    
+    .category-list{
+        flex-direction: row; 
     }
 }
