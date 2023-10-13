@@ -7,15 +7,15 @@ interface ProductProps {
   price: string;
   subtitle: string;
   Image:string;
-  onAddToCart:()=>void;
+  // onAddToCart:()=>void;
 }
 
-const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image,onAddToCart }) => {
+const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image }) => {
   const [cartCount, setCartCount] = useState(0);
 
   const addToCart = () => {
     setCartCount(cartCount + 1);
-    onAddToCart();
+    // onAddToCart();
   };
 
   return (

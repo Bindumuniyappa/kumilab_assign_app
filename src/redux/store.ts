@@ -1,4 +1,3 @@
-// src/redux/store.ts
 import { createStore, combineReducers } from 'redux';
 import cartReducer from './reducers/cartReducer';
 

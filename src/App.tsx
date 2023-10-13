@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import CategoryPanel from './components/CategoryPanel/CategoryPanel';
 import Product from './components/Product/Product';
+import store from './redux/store';
 
 const products=[
   {
@@ -30,15 +31,9 @@ const products=[
     subtitle:'1 lb',
     Image:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_104084443_blackberries-in-plastic-dishes.-blackberry-in-a-transparent-container.-front-view..html&psig=AOvVaw3V_a3TmsTzmN5lhj8TzUkb&ust=1697283608746000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNiN5bP48oEDFQAAAAAdAAAAABAE'
   }
-
 ]
 
 const App: React.FC = () => {
-
-
-  // const handleAddCart=()=>{
-  //   setCartCount(cartCount+1);
-  // }
 
   return (
     <Provider store={store}>
@@ -57,7 +52,7 @@ const App: React.FC = () => {
         ))}
       </div>
     </div>
-      </Provider>
+    </Provider>
   );
 };
 
