@@ -1,4 +1,3 @@
-// src/components/Product.tsx
 import React, { useState } from 'react';
 import './Product.css';
 
@@ -21,8 +20,9 @@ const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image }) => {
   return (
     <div className='product-container'>
     <div className="product">
-      <h3>{name}</h3>
+      <img src={Image}></img>
       <p className="product-price">{price}</p>
+      <h3>{name}</h3>
       <p className="product-subtitle">{subtitle}</p>
       {/* <button onClick={addToCart}>+</button> */}
       {/* <span className="cart-count">{cartCount}</span> */}
