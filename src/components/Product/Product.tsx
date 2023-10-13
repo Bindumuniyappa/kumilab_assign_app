@@ -22,10 +22,10 @@ const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image }) => {
     <div className='product-container'>
     <div className="product">
       <h3>{name}</h3>
-      <p className="product-subtitle">{subtitle}</p>
       <p className="product-price">{price}</p>
-      <button onClick={addToCart}>+</button>
-      <span className="cart-count">{cartCount}</span>
+      <p className="product-subtitle">{subtitle}</p>
+      {/* <button onClick={addToCart}>+</button> */}
+      {/* <span className="cart-count">{cartCount}</span> */}
     </div>
     </div>
   );

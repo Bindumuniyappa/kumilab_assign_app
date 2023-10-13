@@ -30,6 +30,18 @@ const products=[
     price:'$0.69',
     subtitle:'1 lb',
     Image:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_104084443_blackberries-in-plastic-dishes.-blackberry-in-a-transparent-container.-front-view..html&psig=AOvVaw3V_a3TmsTzmN5lhj8TzUkb&ust=1697283608746000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNiN5bP48oEDFQAAAAAdAAAAABAE'
+  },
+  {
+    name:'Banana 1 ct',
+    price:'$0.69',
+    subtitle:'18 oz',
+    Image:'https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbanana&psig=AOvVaw2KAG2Q2RMT03st9aKSD1To&ust=1697283093184000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjIh7b28oEDFQAAAAAdAAAAABAE'
+  },
+  {
+    name:'Strawberries',
+    price:'$0.69',
+    subtitle:'1 lb',
+    Image:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.orgpick.com%2Fproducts%2Forganic-strawberry&psig=AOvVaw115y0qTB2jqJqb5KpJyLlM&ust=1697283327428000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMCc-6D38oEDFQAAAAAdAAAAABAE'
   }
 ]
 
@@ -41,6 +53,7 @@ const App: React.FC = () => {
       <Navbar/>
       <CategoryPanel/> 
       <div className="main-content">
+        <div className='product-loop'>
       {products.map((product, index) => (
           <Product
             key={index}
@@ -50,6 +63,7 @@ const App: React.FC = () => {
             Image={product.Image}
           />
         ))}
+        </div>
       </div>
     </div>
     </Provider>

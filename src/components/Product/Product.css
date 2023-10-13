@@ -2,9 +2,9 @@
 .product {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 13px;
     margin: 10px;
-    width: 250px;
+    width: 160px;
     display: flex;
     flex-direction:column;
     align-items: center;
