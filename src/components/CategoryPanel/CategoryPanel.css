@@ -40,7 +40,6 @@
 .category-list li:hover {
     background-color: rgb(47,180,225);
     border-radius: 10px;
-    /* width: 180px; */
     color: white;
 }
 
@@ -53,13 +52,14 @@
         z-index: 30;
     }
     .category-list.mobile{
-        flex-direction: row; 
+        flex-direction:row; 
         flex-wrap: nowrap;
     }
     .category-list.mobile .category-item{
         padding: 0 20px;
     }
     .category-list li:hover{
-        width: 40px;
+        width: 80px;
+        box-sizing: content-box;
     }
 }
