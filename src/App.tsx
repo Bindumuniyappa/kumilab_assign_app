@@ -9,7 +9,7 @@ import banana from './components/images/banana.jpg';
 import strawberries from './components/images/strawberries.jpg';
 import yougurt from './components/images/yougurt1.jpg';
 import blackberries from './components/images/blackberries.jpg';
-import Cart from './components/Cart/Cart';
+
 
 const products=[
   {
@@ -79,7 +79,6 @@ const App: React.FC = () => {
       </div>
         ))}
         </div>
-        <Cart/>
     </div>
     </Provider>
   );

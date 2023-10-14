@@ -48,7 +48,7 @@
 // });
 
 // export default connect(mapStateToProps,{addToCart,removeFromCart})(Product);
-import React from 'react';
+import React,{useState} from 'react';
 import './Product.css';
 import { BsPlusCircleFill, BsDashCircleFill } from 'react-icons/bs';
 import { connect } from 'react-redux';
@@ -76,28 +76,32 @@ const Product: React.FC<ProductProps> = ({
   category,
 }) => {
   const categoryCart = cart[category] || [];
-  const productInCart = categoryCart.find((item: any) => item.name === name);
+  // const productInCart = categoryCart.find((item: any) => item.name === name);
+  const [isInCart, setIsInCart] = useState(!!categoryCart.find((item: any) => item.name === name));
 
-  const addProductToCart = () => {
-    addToCart({ name, price, subtitle, Image, category });
-  };
-
-  const removeProductFromCart = () => {
-    removeFromCart({ name, category });
+   const addProductToCart = () => {
+    if (isInCart) {
+      removeFromCart({ name, category });
+    } else {
+      addToCart({ name, price, subtitle, Image, category });
+    }
+    setIsInCart(!isInCart);
   };
 
   return (
     <div className='product-container'>
+      <div className='product-scroll'>
       <div className='product'>
         <img src={Image} className='product-image' alt={name} />
-        {productInCart ? (
-          <BsDashCircleFill className='icons' onClick={removeProductFromCart} />
+        {isInCart ? (
+          <BsDashCircleFill className='icons' onClick={addProductToCart} />
         ) : (
           <BsPlusCircleFill className='icons' onClick={addProductToCart} />
         )}
         <p className='product-price'>{price}</p>
         <h3>{name}</h3>
         <p className='product-subtitle'>{subtitle}</p>
+      </div>
       </div>
     </div>
   );

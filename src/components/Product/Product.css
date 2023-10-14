@@ -1,4 +1,9 @@
-
+.product-scroll{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
 .product {
     background-color: #fff;
     /* border: 1px solid #ddd; */
@@ -63,3 +68,12 @@
     margin: 5px 0;
   }
   
+    @media (min-width:360px) and (max-width: 768px){
+      .product-scroll{
+        display: flex;
+        overflow-x: auto;
+      }
+      .product-scroll::-webkit-scrollbar{
+        width: 0;
+      }
+    }

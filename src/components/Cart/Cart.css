@@ -3,13 +3,13 @@ width: 60px;
 height: 35px;
 background-color: white;
 border-radius: 40%;
+margin-right: 40px;
 box-shadow: 2px 4px 8px rgba(36, 35, 35, 0.2);
 }
 
 .count-container{
 position: relative;
-    margin-left: 7px;
-    margin-top: 0px;
+margin-left:8px;
 }
 
 .icon {
