@@ -4,16 +4,28 @@
 }
 
 .main-content{
-  width: 86%;
+  width: 85%;
   display:flex;
   flex-wrap: wrap;
   border: 2px solid black;
   position: relative;
-  margin-left: 202px;
+  margin-left: 219px;
   margin-top: -710px;
 }
 
 .product-loop{
   display: flex;
     animation: scroll 20s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .product-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .main-content{
+    margin-top:200px ;
+  }
 }

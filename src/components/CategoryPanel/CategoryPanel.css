@@ -4,12 +4,12 @@
     height: 100vh;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    width: 200px;
+    width: 220px;
     align-items: flex-start;
 }
 
 .category-panel h2 {
-    font-size: 20px;
+    font-size: 30px;
     margin: 0;
     padding: 10px;
 }
@@ -29,6 +29,7 @@
     padding: 5px 0;
     cursor: pointer;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .category-list li:hover {
@@ -38,14 +39,13 @@
     color: white;
 }
 
-@media (max-width: 768px) {
+@media (min-width:360px) and (max-width: 768px) {
     .category-panel {
         position: sticky;
         top: 0;
         height: 100vh;
         width: 100%;
     }
-    
     .category-list{
         flex-direction: row; 
     }

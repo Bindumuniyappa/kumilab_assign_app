@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 
 const Cart: React.FC = () => {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) =>state.cart);
 
   return (
     <div className="cart">
