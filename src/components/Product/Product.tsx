@@ -1,34 +1,50 @@
 import React, { useState } from 'react';
 import './Product.css';
+import {BsPlusCircleFill,BsDashCircleFill} from 'react-icons/bs';
+import {connect} from 'react-redux';
+import {addToCart,removeFromCart} from '../../redux/actions/cartActions';
 
 interface ProductProps {
   name: string;
   price: string;
   subtitle: string;
   Image:string;
-  // onAddToCart:()=>void;
+  cart:any;
+  category:string;
+  addToCart:(product:any)=>void;
+  removeFromCart:(productName:string)=>void;
 }
 
-const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image }) => {
-  const [cartCount, setCartCount] = useState(0);
+const Product: React.FC<ProductProps> = ({ name, price, subtitle,Image,cart,addToCart,removeFromCart,category}) => {
+   const productInCart = cart.find((item: any) => item.name === name);
 
-  const addToCart = () => {
-    setCartCount(cartCount + 1);
-    // onAddToCart();
+  const addProductToCart = () => {
+    addToCart({ name, price, subtitle, Image,category });
+  };
+
+  const removeProductFromCart = () => {
+    removeFromCart(name);
   };
 
   return (
     <div className='product-container'>
     <div className="product">
-      <img src={Image}></img>
+      <img src={Image} className="product-image" alt={name} />
+      {productInCart ? (
+          <BsDashCircleFill className='icons' onClick={removeProductFromCart} />
+        ) : (
+          <BsPlusCircleFill className='icons' onClick={addProductToCart} />
+        )}
       <p className="product-price">{price}</p>
       <h3>{name}</h3>
       <p className="product-subtitle">{subtitle}</p>
-      {/* <button onClick={addToCart}>+</button> */}
-      {/* <span className="cart-count">{cartCount}</span> */}
     </div>
     </div>
   );
 };
 
-export default Product;
+const mapStateToProps=(state:any)=>({
+  cart:state.cart,
+});
+
+export default connect(mapStateToProps,{addToCart,removeFromCart})(Product);

@@ -7,7 +7,7 @@
   width: 85%;
   display:flex;
   flex-wrap: wrap;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   position: relative;
   margin-left: 219px;
   margin-top: -710px;
@@ -16,6 +16,10 @@
 .product-loop{
   display: flex;
     animation: scroll 20s linear infinite;
+}
+
+.category-heading{
+  margin-left: 50px;
 }
 
 @media (max-width: 768px) {

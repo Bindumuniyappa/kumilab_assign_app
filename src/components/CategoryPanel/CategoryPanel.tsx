@@ -23,7 +23,6 @@ const handleCategoryClick = (category) => {
   const el = document.getElementById(category.name+ " >");
   console.log(el,category.name)
   el?.scrollIntoView({ behavior: "smooth" });
- 
 };
 
 const CategoryPanel: React.FC = () => {

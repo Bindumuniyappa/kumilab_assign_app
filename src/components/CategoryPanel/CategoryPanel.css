@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-color: white;
     border: 1px solid #ddd;
     width: 220px;
     align-items: flex-start;
 }
-
+.icon{
+    font-size: 2rem;
+    cursor: pointer;
+}
 .category-panel h2 {
     font-size: 30px;
     margin: 0;
@@ -28,6 +31,7 @@
 .category-list li {
     padding: 5px 0;
     cursor: pointer;
+    color: grey;
     font-weight: bold;
     font-size: 20px;
 }
