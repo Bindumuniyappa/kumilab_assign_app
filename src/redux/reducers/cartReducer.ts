@@ -1,10 +1,10 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from '../constants';
 
 const initialState = {
-  cart: [],
+  cart: {},
 };
 
-const cartReducer = (state = initialState, action: any) => {
+const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       const { name, category } = action.payload;

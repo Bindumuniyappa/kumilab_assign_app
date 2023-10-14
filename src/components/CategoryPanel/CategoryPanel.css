@@ -44,13 +44,15 @@
 }
 
 @media (min-width:360px) and (max-width: 768px) {
-    .category-panel {
+    /* .category-panel {
         position: sticky;
-        top: 0;
-        height: 100vh;
+        height: 30vh;
         width: 100%;
-    }
-    .category-list{
+    } */
+    .category-list.mobile{
         flex-direction: row; 
+    }
+    .category-list.mobile .category-item{
+        padding: 0 10px;
     }
 }

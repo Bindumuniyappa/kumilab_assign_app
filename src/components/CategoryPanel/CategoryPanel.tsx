@@ -13,7 +13,7 @@ const categories = [
   { name: 'Bakery', icon: <MdOutlineCake className='icon' /> },
   { name: 'Diary & Eggs', icon: <TbEggs className='icon' /> },
   { name: 'Frozen', icon: <GiCannedFish className='icon' /> },
-  { name: 'Meat & Seafood', icon: <TbMeat className='icon' /> },
+  { name: 'Meat & Seafood', icon: <TbMeat className='icon' />},
   { name: 'Bakery', icon: <MdOutlineCake className='icon' /> },
   { name: 'Diary & Eggs', icon: <TbEggs className='icon' /> },
   { name: 'Prepared foods', icon: <GiWrappedSweet className='icon' /> },
@@ -26,13 +26,14 @@ const handleCategoryClick = (category) => {
 };
 
 const CategoryPanel: React.FC = () => {
+  console.log(window.innerWidth)
+  const isMobile = window.innerWidth <= 768;
   return (
     <div className="category-panel">
-      <ul className="category-list">
+      <ul className={`category-list ${isMobile ? 'mobile' : ''}`}>
         {categories.map((category, index) => (
-          <li key={index} className='category-item' onClick={()=>{handleCategoryClick(category)}}>
-            {window.innerWidth < 768 ?(category.icon,category.name):null}
-            {window.innerWidth > 768 ? category.name :null}
+          <li key={index} className={`category-item ${isMobile ? 'mobile' : ''}`} onClick={() => { handleCategoryClick(category) }}>
+            {isMobile ? category.icon : category.name}
           </li>
         ))}
       </ul>
