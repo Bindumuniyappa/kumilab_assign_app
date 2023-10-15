@@ -32,7 +32,7 @@ const CategoryPanel: React.FC = () => {
       <ul className={`category-list ${isMobile ? 'mobile' : ''}`}>
         {categories.map((category, index) => (
           <li key={index} className={`category-item ${isMobile ? 'mobile' : ''}`} onClick={() => { handleCategoryClick(category) }}>
-            {isMobile ? category.name : category.name}
+            {isMobile ? category.name : category.icon}
           </li>
         ))}
       </ul>
