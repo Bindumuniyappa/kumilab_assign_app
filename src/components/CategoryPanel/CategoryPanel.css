@@ -6,6 +6,7 @@
     border: 1px solid #ddd;
     width: 220px;
     align-items: flex-start;
+    max-height: 94vh;
 }
 .icon{
     font-size: 2rem;
@@ -24,31 +25,33 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left:20px ;
 }
 
 .category-list li {
-    padding: 5px 0;
+    padding: 5px;
     cursor: pointer;
     color: grey;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
 }
 
 .category-list li:hover {
     background-color: rgb(47,180,225);
     border-radius: 10px;
-    width: 180px;
+    /* width: 180px; */
     color: white;
 }
 
 @media (min-width:360px) and (max-width: 768px) {
-    /* .category-panel {
+    .category-panel {
         position: sticky;
-        height: 30vh;
+        height: fit-content;
         width: 100%;
-    } */
+        overflow: scroll;
+        z-index: 30;
+    }
     .category-list.mobile{
         flex-direction: row; 
     }

@@ -60,7 +60,7 @@ const App: React.FC = () => {
     <div className="app">
       <Navbar/>
       <CategoryPanel/> 
-      <div className="main-content">
+      <div className="container main-content">
         {categories.map((category,categoryIndex)=>(
         <div key={categoryIndex} className='category-container'>
           <h1 id={category} className='category-heading'>{category}</h1>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
       </div>
         ))}
         </div>
-        <Cart/>
+        {/* <Cart/> */}
     </div>
     </Provider>
   );
