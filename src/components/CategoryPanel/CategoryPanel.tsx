@@ -5,6 +5,7 @@ import { TbCarrot, TbEggs, TbMeat } from 'react-icons/tb';
 import { MdOutlineCake } from 'react-icons/md';
 
 const categories = [
+
   { name: 'Produce', icon: <TbCarrot className='icon' /> },
   { name: 'Prepared foods', icon: <GiWrappedSweet className='icon' /> },
   { name: 'Canned foods & Soups', icon: <GiCannedFish className='icon' /> },
@@ -16,11 +17,12 @@ const categories = [
   { name: 'Bakery', icon: <MdOutlineCake className='icon' /> },
   { name: 'Diary & Eggs', icon: <TbEggs className='icon' /> },
   { name: 'Prepared foods', icon: <GiWrappedSweet className='icon' /> },
+
 ];
 
 const handleCategoryClick = (category) => {
   const el = document.getElementById(category.name+ " >");
-  console.log(el,category.name)
+  console.log(el,category.name);
   el?.scrollIntoView({ behavior: "smooth" });
 };
 
@@ -32,7 +34,7 @@ const CategoryPanel: React.FC = () => {
       <ul className={`category-list ${isMobile ? 'mobile' : ''}`}>
         {categories.map((category, index) => (
           <li key={index} className={`category-item ${isMobile ? 'mobile' : ''}`} onClick={() => { handleCategoryClick(category) }}>
-            {isMobile ? category.name : category.icon}
+            {isMobile ? category.icon : category.name}
           </li>
         ))}
       </ul>

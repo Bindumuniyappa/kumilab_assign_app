@@ -13,7 +13,7 @@
   max-height: 95vh;
   position: relative;
   margin-left: 219px;
-  margin-top: -650px;
+  margin-top: -860px;
 }
 
 .main-content::-webkit-scrollbar {
@@ -39,7 +39,7 @@
 
   .main-content{
     max-height: 81vh;
-    margin-top:10px ;
+    margin-top:10px;
     margin-left:0px;
   }
 }
